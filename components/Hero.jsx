@@ -8,6 +8,7 @@ import {
 } from "react-icons/ri";
 import { Button } from "./ui/button";
 import { Sen } from "next/font/google";
+import Socials from "./Socials";
 const Hero = () => {
   return (
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
@@ -18,7 +19,9 @@ const Hero = () => {
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               Web Developer
             </div>
-            <h1 className="h1 mb-4 ">Hello, I&apos;m Md. Iftekhirull (Ifty) </h1>
+            <h1 className="h1 mb-4 ">
+              Hello, I&apos;m Md. Iftekhirull (Ifty){" "}
+            </h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
               Brief Description with insights into myself, my vocational
               journey, and what I engage in professionally.
@@ -34,6 +37,12 @@ const Hero = () => {
                 Download CV <Download size={18} />
               </Button>
             </div>
+
+            {/* socials */}
+            <Socials
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+            />
           </div>
           {/* image  */}
           <div className="hidden xl:flex relative">image</div>
