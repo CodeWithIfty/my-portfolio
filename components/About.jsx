@@ -10,6 +10,7 @@ import {
   Briefcase,
 } from "lucide-react";
 import DevImg from "./DevImg";
+import Image from "next/image";
 
 const infoData = [
   {
@@ -268,8 +269,54 @@ const About = () => {
                     </div>
                   </div>
                 </TabsContent>
-                
-                <TabsContent value="skills"> Skills Info</TabsContent>
+                {/* Skills */}
+                <TabsContent value="skills">
+                  <div className="text-center xl:text-left ">
+                    <h3 className="h3 mb-8">What I Use Everyday</h3>
+                    {/* skills */}
+                    <div className="mb-16 ">
+                      <h4 className="text-xl font-semibold mb-2">SKills</h4>
+                      <div className=" border-b border-border mb-4">
+                        {/* Skills List */}
+                      </div>
+                      {getData(skillData, "skills").data.map((item, index) => {
+                        const { name } = item;
+                        return (
+                          <div
+                            key={index}
+                            className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                          >
+                            <div className="font-medium">{name}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* Tools */}
+                    <div className="">
+                      <h4 className=" text-xl font-semibold mb-2 xl:text-left">
+                        Tools
+                      </h4>
+                      <div className="border-b border-border mb-4"></div>
+                    </div>
+                    {/* Tools list */}
+                    <div className="flex gap-x-8  justify-center xl:justify-start">
+                      {getData(skillData, "tools").data.map((item, index) => {
+                        const { imgPath } = item;
+                        return (
+                          <div className=" " key={index}>
+                            <Image
+                              src={imgPath}
+                              width={48}
+                              height={48}
+                              alt=""
+                              priority
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </TabsContent>
               </div>
             </Tabs>
           </div>
