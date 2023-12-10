@@ -38,6 +38,7 @@ const infoData = [
     text: "Rajshahi, Bangladesh",
   },
 ];
+
 const qualificationData = [
   {
     title: "education",
