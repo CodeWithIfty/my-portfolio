@@ -1,3 +1,22 @@
-<svg width="509" height="462" viewBox="0 0 509 462" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M430.684 91.8476C485.587 148.958 523.332 231.872 503.773 294.831C483.871 357.79 406.664 400.451 331.516 429.351C256.711 458.25 183.965 473.388 128.376 448.617C72.4443 423.846 32.983 358.822 13.0808 285.198C-6.47826 211.917 -7.16455 130.036 32.2967 76.3658C72.1011 22.6955 151.71 -2.76337 227.544 0.332983C303.722 3.08531 375.781 34.7369 430.684 91.8476Z" fill="#FE705A"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 509 462" style="enable-background:new 0 0 509 462;" xml:space="preserve">
+<image style="overflow:visible;" width="300" height="300" xlink:href="../../../../../Users/Code With Iftekhar/Downloads/Iftekhirull-removebg-preview.png"  transform="matrix(1.8091 8.092447e-02 -8.092447e-02 1.8091 791.8904 97.453)">
+</image>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M430.7,92.3c54.9,57.1,92.6,140,73.1,203c-19.9,63-97.1,105.6-172.3,134.5c-74.8,28.9-147.6,44-203.1,19.3
+			C72.4,424.3,33,359.2,13.1,285.6C-6.5,212.3-7.2,130.5,32.3,76.8c39.8-53.7,119.4-79.1,195.2-76C303.7,3.5,375.8,35.2,430.7,92.3z
+			"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g transform="matrix(1 0 0 1 -1.525879e-05 0)" style="clip-path:url(#SVGID_2_);">
+		
+			<image style="overflow:visible;" width="3542" height="4723" xlink:href="../../../../../Users/Code With Iftekhar/Downloads/pic-removebg.png"  transform="matrix(0.2841 7.302200e-03 -7.302200e-03 0.2841 -163.3501 -321.0584)">
+		</image>
+	</g>
+</g>
 </svg>
