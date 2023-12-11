@@ -14,9 +14,9 @@ const Header = () => {
 
   useEffect(() => {
     const scrollYPos = window.addEventListener("scroll", () => {
-      window.scrollY > 50 ? setHeader(true) : setHeader(false);
+      window.scrollY > 1074 ? setHeader(true) : setHeader(false);
     });
-
+    console.log(window.scrollY);
     // remove event
     return () => window.removeEventListener("scroll", scrollYPos);
   }, []);
@@ -26,7 +26,7 @@ const Header = () => {
         header
           ? "py-4 bg-white shadow-lg dark:bg-accent"
           : " py-6 dark:bg-transparent"
-      } sticky top-0 z-30 transition-all ${pathName === "/" && "bg-[#fef9f5]"}`}
+      } fixed right-0 left-0 top-0 z-30 transition-all ${pathName === "/" && "bg-[#fef9f5]"}`}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center ">

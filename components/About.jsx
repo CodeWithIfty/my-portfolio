@@ -122,7 +122,7 @@ const About = () => {
     return arr.find((item) => item.title === title);
   };
   return (
-    <section className="xl:h-[860px] p-12 xl:p-24">
+    <div className="xl:h-[860px] p-12 xl:p-24 flex justify-center items-center">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto ">
           About me
@@ -320,7 +320,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

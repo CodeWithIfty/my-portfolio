@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
 @layer base {
   @layer base {
     :root {

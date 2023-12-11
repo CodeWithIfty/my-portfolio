@@ -15,7 +15,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+    <div className="py-12  h-[95vh]  bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none flex justify-center items-center ">
       <div className="container mx-auto">
         <div className="">
           <div className="flex justify-between  ">
@@ -108,7 +108,7 @@ const Hero = () => {
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
