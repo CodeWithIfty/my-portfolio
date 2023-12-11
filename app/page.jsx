@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Services from "@/components/Services";
+import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
         <About />
       </section>
       <Portfolio />
-      <section></section>
+      <section id="contact">
+        <Contact />
+      </section>
     </main>
   );
 }
