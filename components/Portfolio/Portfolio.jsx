@@ -1,7 +1,7 @@
 "use client";
 import { useScroll, useSpring, motion, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { Github, Globe } from "lucide-react";
 
@@ -37,13 +37,21 @@ const items = [
 
 const Single = ({ item }) => {
   const ref = useRef();
+  const [isExtraLargeDevice, setIsExtraLargeDevice] = useState();
 
   const { scrollYProgress } = useScroll({
     target: ref,
   });
+  useEffect(() => {
+    const isClient = typeof window !== "undefined";
 
+    if (isClient) {
+      const LargeDevice = window.matchMedia("(min-width: 1280px)").matches;
+      setIsExtraLargeDevice(LargeDevice);
+    }
+  }, []);
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
-  const isExtraLargeDevice = window.matchMedia("(min-width: 1280px)").matches;
+
   return (
     <section id="portfolio">
       <div className="flex justify-center items-center w-full h-full overflow-hidden ">
