@@ -38,7 +38,7 @@ const Hero = () => {
                   </Button>
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1soialGdx2Rip4M25L4H147XcjXOe1xQk/view?usp=sharing"
+                  href="/Resume Of MD IFTEKHIRULL (MERN Stack Developer).pdf"
                   target="_blank"
                 >
                   <Button variant="secondary" className="gap-x-2">
