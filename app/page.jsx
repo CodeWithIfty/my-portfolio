@@ -15,7 +15,9 @@ export default function Home() {
         <About />
       </section>
       <Portfolio />
-      <section id="contact">{/* <Contact /> */}</section>
+      <section id="contact">
+        <Contact />
+      </section>
     </main>
   );
 }
