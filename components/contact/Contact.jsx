@@ -21,6 +21,7 @@ const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
 
   const isInView = useInView(ref, { margin: "-100px" });
 
@@ -37,7 +38,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setError(false);
+          setSuccess(true);
         },
         (error) => {
           console.log(error.text);
@@ -49,12 +50,16 @@ const Contact = () => {
   return (
     <motion.div
       ref={ref}
-      className="h-full max-w-[1366px] m-auto flex gap-12 items-center"
+      className="h-full container mxa flex flex-col xl:flex-row xl:gap-12 gap-1 items-center justify-center "
       variants={variants}
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className="flex-1 flex flex-col gap-10 " variants={variants}>
+      {/* Texts */}
+      <motion.div
+        className="xl:flex-1 flex flex-col xl:gap-10 "
+        variants={variants}
+      >
         <motion.h1 className="h1 leading-10" variants={variants}>
           Lets work together
         </motion.h1>
@@ -71,16 +76,17 @@ const Contact = () => {
           <span>+880 1586-103550</span>
         </motion.div>
       </motion.div>
-      <div className="flex-1 relative">
+      {/* Form */}
+      <div className="xl:flex-1 relative flex   justify-center items-center">
         <motion.div
-          className="absolute m-auto  stroke-orange-400 z-[-1]"
+          className="absolute m-auto  stroke-orange-400 z-[-1] "
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
         >
           <svg
-            width="450px"
-            height="450px"
+            width="400px"
+            height="400px"
             viewBox="0 0 64 64"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -116,7 +122,7 @@ const Contact = () => {
         <motion.form
           ref={formRef}
           onSubmit={sendEmail}
-          className="flex flex-col gap-5 z-30"
+          className="flex flex-col gap-5 "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
@@ -144,7 +150,8 @@ const Contact = () => {
             className="p-5 bg-transparent border border-white text-white rounded"
           ></textarea>
           <button className="border-none bg-primary p-5">Submit</button>
-          {error === false ? "Success" : "Error"}
+          {success && "Message Sent Successfully"}
+          {error && "Error"}
         </motion.form>
       </div>
     </motion.div>
