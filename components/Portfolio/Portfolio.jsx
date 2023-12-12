@@ -1,8 +1,8 @@
 "use client";
 import { useScroll, useSpring, motion, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { Button } from "../ui/button";
+import { useRef } from "react";
+
 import { Github, Globe } from "lucide-react";
 
 const items = [
@@ -41,15 +41,15 @@ const Single = ({ item }) => {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 2], [-100, 100]);
 
   return (
-    <section id="portfolio">
-      <div className="flex justify-center items-center w-full h-full overflow-hidden ">
+    <section>
+      <div className="flex justify-center items-center xl:w-full xl:h-full overflow-hidden ">
         <div className="container xl:mx-auto grid xl:grid-cols-2 justify-center items-center gap-5 mt-40 mx-10">
           {/* Image */}
           <div
-            className="rounded overflow-hidden drop-shadow-xl xl:col-span-1  border-2 border-primary shadow-black dark:shadow-white  "
+            className="rounded overflow-hidden drop-shadow-xl xl:col-span-1  border-2 border-primary shadow-black dark:shadow-white mt-5 "
             ref={ref}
           >
             <Image
@@ -112,7 +112,7 @@ const Portfolio = () => {
   });
 
   return (
-    <div className="relative" ref={ref}>
+    <div className="relative" ref={ref} id="portfolio">
       <div className="sticky top-0 left-0 xl:pt-32 pt-[5rem] text-center  text-4xl">
         <h2 className="section-title mb-8 xl:mb-5 text-center mx-auto ">
           Featured Projects
