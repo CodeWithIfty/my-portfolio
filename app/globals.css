@@ -10,6 +10,26 @@ section {
   height: 100vh;
   scroll-snap-align: center;
 }
+
+/* Hide scrollbar but still allow scrolling */
+body {
+  overflow: auto;
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 1em;
+}
+
 @layer base {
   @layer base {
     :root {

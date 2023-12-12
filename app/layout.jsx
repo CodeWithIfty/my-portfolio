@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 
 // Theme Provider
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Cursor from "@/components/cursor/Cursor";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -20,9 +21,9 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressContentEditableWarning>
       <body className={outfit.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
+          <Cursor />
           <Header />
           {children}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

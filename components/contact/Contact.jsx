@@ -1,6 +1,8 @@
 "use client";
 import { useInView, motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 const variants = {
   initial: {
     y: 500,
@@ -17,7 +19,33 @@ const variants = {
 };
 const Contact = () => {
   const ref = useRef();
+  const formRef = useRef();
+  const [error, setError] = useState(null);
+
   const isInView = useInView(ref, { margin: "-100px" });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gzjw79l",
+        "template_92hskuh",
+        formRef.current,
+        "ehAygIQL4-2PKFV5E"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setError(false);
+        },
+        (error) => {
+          console.log(error.text);
+          setError(true);
+        }
+      );
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -31,21 +59,21 @@ const Contact = () => {
           Lets work together
         </motion.h1>
         <motion.div className="" variants={variants}>
-          <h2>Mail</h2>
+          <h2 className="text-lg font-semibold">Mail</h2>
           <span>codewithiftekhar@gmail.com</span>
         </motion.div>
         <motion.div className="" variants={variants}>
-          <h2>Address</h2>
+          <h2 className="text-lg font-semibold">Address</h2>
           <span>Rajshahi, Bangladesh</span>
         </motion.div>
         <motion.div className="" variants={variants}>
-          <h2>Phone</h2>
+          <h2 className="text-lg font-semibold">Phone</h2>
           <span>+880 1586-103550</span>
         </motion.div>
       </motion.div>
       <div className="flex-1 relative">
         <motion.div
-          className="absolute m-auto  stroke-orange-400"
+          className="absolute m-auto  stroke-orange-400 z-[-1]"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
@@ -86,7 +114,9 @@ const Contact = () => {
           </svg>
         </motion.div>
         <motion.form
-          className="flex flex-col gap-5"
+          ref={formRef}
+          onSubmit={sendEmail}
+          className="flex flex-col gap-5 z-30"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
@@ -95,16 +125,18 @@ const Contact = () => {
             type="text"
             required
             placeholder="Name"
+            name="name"
             className="p-5 bg-transparent border border-white text-white rounded"
           />
           <input
             type="email"
             required
             placeholder="Email"
+            name="email"
             className="p-5 bg-transparent border border-white text-white rounded"
           />
           <textarea
-            name=""
+            name="message"
             id=""
             cols="30"
             rows="8"
@@ -112,6 +144,7 @@ const Contact = () => {
             className="p-5 bg-transparent border border-white text-white rounded"
           ></textarea>
           <button className="border-none bg-primary p-5">Submit</button>
+          {error === false ? "Success" : "Error"}
         </motion.form>
       </div>
     </motion.div>
