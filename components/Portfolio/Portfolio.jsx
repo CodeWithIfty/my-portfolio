@@ -37,7 +37,6 @@ const items = [
 
 const Single = ({ item }) => {
   const ref = useRef();
-  const [isExtraLargeDevice, setIsExtraLargeDevice] = useState();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -63,7 +62,7 @@ const Single = ({ item }) => {
           </div>
           {/* Text */}
           <motion.div
-            className="xl:col-span-1  flex flex-col justify-center  items-center xl:items-start text-center xl:text-left   gap-2 mt-14 xl:mt-0"
+            className="xl:col-span-1  flex flex-col justify-center  items-center xl:items-start text-center xl:text-left   gap-2 mt-16 xl:mt-0"
             style={{ y }}
           >
             <h2 className="h1">{item.title}</h2>
