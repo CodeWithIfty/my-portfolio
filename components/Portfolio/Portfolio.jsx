@@ -2,25 +2,36 @@
 import { useScroll, useSpring, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { Button } from "../ui/button";
+import { Github, Globe } from "lucide-react";
 
 const items = [
   {
     id: 1,
     title: "Survey Ocean",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Vero amet eius quam voluptatem molestias consequuntur illum ipsam ut! Vero amet eius quam voluptatem molestias consequuntur illum ipsam ut!",
+    img: "https://i.ibb.co/0Gmxc2G/Screenshot-20.png",
+    desc: " Excited to share the completion of my latest project – a comprehensive Polling and Survey application built using the MERN stack! 👨‍💻🚀",
+    live: "https://survey-ocean.web.app/",
+    client: "https://github.com/CodeWithIfty/survey-ocean-client",
+    server: "https://github.com/CodeWithIfty/survey-ocean-server",
   },
   {
     id: 2,
-    title: "Survey Ocean",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Vero amet eius quam voluptatem molestias consequuntur illum ipsam ut! Vero amet eius quam voluptatem molestias consequuntur illum ipsam ut!",
+    title: "Talent Hub",
+    img: "https://i.ibb.co/K0kTW4M/Screenshot-21.png",
+    desc: "Welcome to our MERN Web Marketplace application! This app is designed to help users post web development, digital marketing, and graphic design jobs and receive bids from other users. 👨‍💻🚀",
+    live: "https://talenthub-c77ac.web.app/",
+    client: "https://github.com/CodeWithIfty/talenthub-client",
+    server: "https://github.com/CodeWithIfty/talenthub-server",
   },
   {
     id: 3,
-    title: "Survey Ocean",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Vero amet eius quam voluptatem molestias consequuntur illum ipsam ut! Vero amet eius quam voluptatem molestias consequuntur illum ipsam ut!",
+    title: "Foody",
+    img: "https://i.ibb.co/v4SZB2L/Screenshot-22.png",
+    desc: "This is a brand-based website project focusing on Food and Beverage products. Users can explore and shop for their favorite brands, add products to their cart, and enjoy a seamless shopping experience.👨‍💻🚀",
+    live: "https://b8a10-brandshop-client-s-3e90b.web.app/",
+    client: "https://github.com/CodeWithIfty/brandShop-client-side",
+    server: "https://github.com/CodeWithIfty/brandShop-server-side",
   },
 ];
 
@@ -32,24 +43,57 @@ const Single = ({ item }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const isExtraLargeDevice = window.matchMedia("(min-width: 1280px)").matches;
   return (
     <section id="portfolio">
-      <div className="flex justify-center items-center w-full h-full overflow-hidden">
-        <div className="max-w-[1366px] h-full  m-auto flex justify-center items-center gap-12">
-          <div className="flex-[1] h-1/2" ref={ref}>
+      <div className="flex justify-center items-center w-full h-full overflow-hidden ">
+        <div className="container xl:mx-auto grid xl:grid-cols-2 justify-center items-center gap-5 mt-40 mx-10">
+          {/* Image */}
+          <div
+            className="rounded overflow-hidden drop-shadow-xl xl:col-span-1  border-2 border-primary shadow-black dark:shadow-white  "
+            ref={ref}
+          >
             <Image
               src={item.img}
-              width={500}
-              height={500}
+              width={700}
+              height={300}
               alt=""
-              className="w-full h-full object-cover"
+              className="w-full h-full "
             />
           </div>
-
-          <motion.div className="flex-[1] flex flex-col gap-7" style={{ y }}>
-            <h2 className="text-7xl placeholder:">{item.title}</h2>
-            <p className="text-gray-200 text-2xl">{item.desc}</p>
-            <button className="px-4 py-2 border-y-primary">See Demo</button>
+          {/* Text */}
+          <motion.div
+            className="xl:col-span-1  flex flex-col justify-center  items-center xl:items-start text-center xl:text-left   gap-2 "
+            style={isExtraLargeDevice ? { y } : null}
+          >
+            <h2 className="h1 placeholder:">{item.title}</h2>
+            <p className="xl:text-xl ">{item.desc}</p>
+            <div className="flex gap-x-4 p-2 bg-opacity-25">
+              <a
+                href={item.live}
+                target="_blank"
+                className="flex items-center text-lg gap-x-2 hover:text-primary"
+              >
+                <Globe className="text-sm" />
+                Demo
+              </a>
+              <a
+                href={item.client}
+                target="_blank"
+                className="flex items-center text-lg gap-x-2 hover:text-primary"
+              >
+                <Github className="text-sm" />
+                Client
+              </a>
+              <a
+                href={item.server}
+                target="_blank"
+                className="flex items-center text-lg gap-x-2 hover:text-primary"
+              >
+                <Github className="text-sm" />
+                Server
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -70,11 +114,11 @@ const Portfolio = () => {
 
   return (
     <div className="relative" ref={ref}>
-      <div className="sticky top-0 left-0 pt-32 text-center  text-4xl">
+      <div className="sticky top-0 left-0 xl:pt-32 pt-[5rem] text-center  text-4xl">
         <h2 className="section-title mb-8 xl:mb-5 text-center mx-auto ">
           Featured Projects
         </h2>
-        <motion.div className="h-2 bg-white" style={{ scaleX }}></motion.div>
+        <motion.div className="h-2 bg-primary " style={{ scaleX }}></motion.div>
       </div>
       {items.map((item, index) => (
         <Single key={index} item={item} />

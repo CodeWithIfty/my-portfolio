@@ -32,14 +32,19 @@ const Hero = () => {
               </div>
               {/* button */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
-                <Link href="/contact">
+                <a href="#contact">
                   <Button className="gap-x-2">
                     Contact me <Send size={18} />
                   </Button>
-                </Link>
-                <Button variant="secondary" className="gap-x-2">
-                  Download CV <Download size={18} />
-                </Button>
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1soialGdx2Rip4M25L4H147XcjXOe1xQk/view?usp=sharing"
+                  target="_blank"
+                >
+                  <Button variant="secondary" className="gap-x-2">
+                    Download Resume <Download size={18} />
+                  </Button>
+                </a>
               </div>
 
               {/* socials */}
@@ -65,7 +70,7 @@ const Hero = () => {
           </div>
           {/* Tech Stack */}
           <div className="mt-44 xl:flex  items-center  gap-x-16 hidden ">
-            <h1 className="text-xl font-semibold border-r-2 border-black px-3">
+            <h1 className="text-xl font-semibold border-r-2 border-black dark:border-white px-3">
               Tech Stack
             </h1>
             <div className="flex gap-x-10">
@@ -89,7 +94,7 @@ const Hero = () => {
                 alt=""
               />
               <Image
-                src="/hero/icons/node-js .png"
+                src="/hero/icons/node-js.png"
                 width={32}
                 height={32}
                 alt=""

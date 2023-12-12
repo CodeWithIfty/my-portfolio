@@ -10,10 +10,19 @@ import {
 } from "react-icons/ri";
 
 const icons = [
-  { path: "/", name: <RiYoutubeFill /> },
-  { path: "/", name: <RiLinkedinFill /> },
-  { path: "/", name: <RiGithubFill /> },
-  { path: "/", name: <RiFacebookBoxFill /> },
+  {
+    path: "https://www.youtube.com/@CodeWithIftekhar",
+    name: <RiYoutubeFill />,
+  },
+  {
+    path: "https://www.linkedin.com/in/codewithifty/",
+    name: <RiLinkedinFill />,
+  },
+  { path: "https://github.com/codewithifty", name: <RiGithubFill /> },
+  {
+    path: "https://www.facebook.com/CodeWithIftekhar/",
+    name: <RiFacebookBoxFill />,
+  },
   { path: "/", name: <RiInstagramFill /> },
 ];
 const Socials = ({ containerStyles, iconsStyles }) => {

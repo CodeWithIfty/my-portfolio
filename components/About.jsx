@@ -15,7 +15,7 @@ import Image from "next/image";
 const infoData = [
   {
     icon: <User2 size={20} />,
-    text: "Iftekhirull",
+    text: "Md. Iftekhirull (Ifty)",
   },
   {
     icon: <PhoneCall size={20} />,
@@ -23,7 +23,7 @@ const infoData = [
   },
   {
     icon: <MailIcon size={20} />,
-    text: "codewithiftekhar@gmail.com",
+    text: "mohammad.iftekhirull@gmail.com",
   },
   {
     icon: <Calendar size={20} />,
@@ -44,40 +44,40 @@ const qualificationData = [
     title: "education",
     data: [
       {
-        university: "example univercity",
+        university: "Rajshahi Polytechnic Institute",
         qualification: "DIploma In Engineering",
-        year: "2015 - 2018",
+        year: "2020 - Present",
       },
-      {
-        university: "example univercity",
-        qualification: "DIploma In Engineering",
-        year: "2015 - 2018",
-      },
-      {
-        university: "example univercity",
-        qualification: "DIploma In Engineering",
-        year: "2015 - 2018",
-      },
+      // {
+      //   university: "example univercity",
+      //   qualification: "DIploma In Engineering",
+      //   year: "2015 - 2018",
+      // },
+      // {
+      //   university: "example univercity",
+      //   qualification: "DIploma In Engineering",
+      //   year: "2015 - 2018",
+      // },
     ],
   },
   {
     title: "experience",
     data: [
       {
-        company: "example company",
-        role: "DIploma In Engineering",
-        years: "2015 - 2018",
+        company: "Foundation Engineering Solution",
+        role: "IT-CoOrdinator",
+        years: "May 2023 - Sep 2023",
       },
-      {
-        company: "example company",
-        role: "DIploma In Engineering",
-        years: "2015 - 2018",
-      },
-      {
-        company: "example company",
-        role: "DIploma In Engineering",
-        years: "2015 - 2018",
-      },
+      // {
+      //   company: "example company",
+      //   role: "DIploma In Engineering",
+      //   years: "2015 - 2018",
+      // },
+      // {
+      //   company: "example company",
+      //   role: "DIploma In Engineering",
+      //   years: "2015 - 2018",
+      // },
     ],
   },
 ];
@@ -86,13 +86,13 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "HTML, CSS",
+        name: "HTML, CSS, Javascript, Tailwind, React",
       },
       {
         name: "Front end development",
       },
       {
-        name: "Javascript",
+        name: "Node Js,Express Js, MongoDB, Mongoose",
       },
       {
         name: "Backend development",
@@ -154,9 +154,7 @@ const About = () => {
                 {/* personal */}
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left ">
-                    <h3 className="h3 mb-4">
-                      UnMatched Service Quality for over 10 Years
-                    </h3>
+                    <h3 className="h3 mb-4">MERN Stack Developer</h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
                       I specialize in crafting intuitive websites with
                       cutting-edge technology, delivering dynamic and engaging
@@ -178,7 +176,7 @@ const About = () => {
                     <div className="flex flex-col gap-y-2">
                       <div className="text-primary">Language Skill</div>
                       <div className="border-b border-border"></div>
-                      <div className="">English, Bangla, spanish, italian</div>
+                      <div className="">Bangla, English </div>
                     </div>
                   </div>
                 </TabsContent>
