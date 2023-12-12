@@ -14,7 +14,7 @@ const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
         return (
-          <Link
+          <a
             key={index}
             href={link.path}
             className={`${linkStyles} capitalize`}
@@ -29,7 +29,7 @@ const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
               />
             )}
             {link.name}
-          </Link>
+          </a>
         );
       })}
     </nav>
