@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const scrollYPos = window.addEventListener("scroll", () => {
-      window.scrollY > 1074 ? setHeader(true) : setHeader(false);
+      window.scrollY > 100 ? setHeader(true) : setHeader(false);
     });
     console.log(window.scrollY);
     // remove event
@@ -23,9 +23,7 @@ const Header = () => {
   return (
     <header
       className={`${
-        header
-          ? "py-4 bg-transparent backdrop-blur "
-          : " py-6 dark:bg-transparent"
+        header ? "py-4 bg-transparent" : " py-6 dark:bg-transparent"
       } fixed right-0 left-0 top-0 z-30 transition-all ${
         pathName === "/" && "bg-[#fef9f5]"
       }`}

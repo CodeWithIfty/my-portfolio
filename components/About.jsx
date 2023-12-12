@@ -122,8 +122,8 @@ const About = () => {
     return arr.find((item) => item.title === title);
   };
   return (
-    <div className="xl:h-[860px] p-12 xl:p-24 flex justify-center items-center">
-      <div className="container mx-auto">
+    <div className="xl:h-[860px]  xl:p-24 flex justify-center items-center ">
+      <div className="container mx-auto mt-20">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto ">
           About me
         </h2>
@@ -150,7 +150,7 @@ const About = () => {
                 </TabsTrigger>
               </TabsList>
               {/* tab content */}
-              <div className="text-lg mt-12 xl:mt-8 ">
+              <div className="text-lg  xl:mt-8 ">
                 {/* personal */}
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left ">

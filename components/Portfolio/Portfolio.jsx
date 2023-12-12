@@ -42,14 +42,6 @@ const Single = ({ item }) => {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  useEffect(() => {
-    const isClient = typeof window !== "undefined";
-
-    if (isClient) {
-      const LargeDevice = window.matchMedia("(min-width: 1280px)").matches;
-      setIsExtraLargeDevice(LargeDevice);
-    }
-  }, []);
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
@@ -71,10 +63,10 @@ const Single = ({ item }) => {
           </div>
           {/* Text */}
           <motion.div
-            className="xl:col-span-1  flex flex-col justify-center  items-center xl:items-start text-center xl:text-left   gap-2 "
-            style={isExtraLargeDevice ? { y } : null}
+            className="xl:col-span-1  flex flex-col justify-center  items-center xl:items-start text-center xl:text-left   gap-2 mt-14 xl:mt-0"
+            style={{ y }}
           >
-            <h2 className="h1 placeholder:">{item.title}</h2>
+            <h2 className="h1">{item.title}</h2>
             <p className="xl:text-xl ">{item.desc}</p>
             <div className="flex gap-x-4 p-2 bg-opacity-25">
               <a

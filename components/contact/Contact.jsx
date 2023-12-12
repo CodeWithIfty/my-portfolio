@@ -2,6 +2,7 @@
 import { useInView, motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Button } from "../ui/button";
 
 const variants = {
   initial: {
@@ -132,14 +133,14 @@ const Contact = () => {
             required
             placeholder="Name"
             name="name"
-            className="p-5 bg-transparent border border-white text-white rounded"
+            className="p-5 bg-transparent border border-border text-white rounded"
           />
           <input
             type="email"
             required
             placeholder="Email"
             name="email"
-            className="p-5 bg-transparent border border-white text-white rounded"
+            className="p-5 bg-transparent border border-border text-white rounded"
           />
           <textarea
             name="message"
@@ -147,9 +148,9 @@ const Contact = () => {
             cols="30"
             rows="8"
             placeholder="messages"
-            className="p-5 bg-transparent border border-white text-white rounded"
+            className="p-5 bg-transparent border border-border text-white rounded"
           ></textarea>
-          <button className="border-none bg-primary p-5">Submit</button>
+          <Button className="border-none bg-primary p-5">Submit</Button>
           {success && "Message Sent Successfully"}
           {error && "Error"}
         </motion.form>
