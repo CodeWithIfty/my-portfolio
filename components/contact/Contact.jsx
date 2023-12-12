@@ -58,10 +58,10 @@ const Contact = () => {
     >
       {/* Texts */}
       <motion.div
-        className="xl:flex-1 flex flex-col xl:gap-10 "
+        className="xl:flex-1 flex flex-col xl:gap-10 mt-14"
         variants={variants}
       >
-        <motion.h1 className="h1 leading-10" variants={variants}>
+        <motion.h1 className="xl:h1 text-4xl font-bold leading-10" variants={variants}>
           Lets work together
         </motion.h1>
         <motion.div className="" variants={variants}>
