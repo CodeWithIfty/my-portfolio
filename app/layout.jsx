@@ -14,9 +14,9 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata = {
   title: "CodeWithIfty | Welcome to my portfolio",
   description: "Next.js portfolio by CodeWithIfty",
-  image: "https://codewithifty.netlify.app/hero/Iftekhirull.png",
+  image: "https://codewithifty.netlify.app/hero/md_iftekhirull.jpg",
   url: "https://codewithifty.netlify.app",
-  favicon: "https://codewithifty.netlify.app/hero/Iftekhirull.png",
+  favicon: "https://codewithifty.netlify.app/hero/md_iftekhirull.jpg",
   // You can add other metadata properties here as needed
 };
 
