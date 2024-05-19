@@ -20,7 +20,7 @@ const icons = [
   },
   { path: "https://github.com/codewithifty", name: <RiGithubFill /> },
   {
-    path: "https://www.facebook.com/CodeWithIftekhar/",
+    path: "https://www.facebook.com/codewithifty/",
     name: <RiFacebookBoxFill />,
   },
   { path: "/", name: <RiInstagramFill /> },
